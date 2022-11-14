@@ -25,56 +25,11 @@ const pokemonOl = document.getElementById('pokemonList');
 
 
 
-/* requisicao */
-fetch(url,)
-.then((response) => response.json())
-.then((jsonBody) => jsonBody.results)
-.then((pokemons) => {
-
-for ( i = 0; i < pokemons.length; i++) {
-
-     const pokemon = pokemons[i];
-     const estruturaHTml = pokemonToli(pokemon);
    
      pokemonOl.innerHTML += estruturaHTml
    
 }  
 
-})
-.catch((error) => console.log(error))
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-
-<li class="pokemon ${pokemon.type}">
-<span class="number">#${pokemon.number}</span>
-<span class="name">${pokemon.name}</span>
-<div class="detail">
-    <ol class="types">
-        ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
-    </ol>
-    <img src="${pokemon.photo}"
-         alt="${pokemon.name}">
-</div>
-</li>
-
-
-` */
