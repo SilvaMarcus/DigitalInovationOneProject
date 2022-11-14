@@ -1,10 +1,4 @@
-
-const offset = 0;
-let limit = 8;
-const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`;
-
 const pokemonToli = (pokemon) => {
-  
      return  `
      <li class="pokemon fire ">
           <span class="number">#001</span>
@@ -18,18 +12,14 @@ const pokemonToli = (pokemon) => {
                <img src="../pokemon.png" alt="${pokemon.name}">
           </div>
      </li>`
-
 }
 
-const pokemonOl = document.getElementById('pokemonList');
 
+const pokemonOl = document.getElementById('pokemonList'); 
 
+pokeApi.getPokemons(0,8).then((pokemons) => {
+     pokemonOl.innerHTML += pokemons.map(pokemonToli).join('')
 
-   
-     pokemonOl.innerHTML += estruturaHTml
-   
-}  
-
-
+})
 
 
